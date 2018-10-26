@@ -5,10 +5,39 @@
   "tasks": [
     {
       "type": "shell",
-      "label": "cargo doc",
+      "label": "cargo doc open",
       "command": "cargo",
       "args": ["doc", "--open"],
       "problemMatcher": ["$rustc"]
+    },
+    {
+      "type": "shell",
+      "label": "cargo doc",
+      "command": "cargo",
+      "args": ["doc"],
+      "problemMatcher": ["$rustc"]
+    },
+    {
+      "type": "shell",
+      "label": "cargo build",
+      "command": "cargo",
+      "args": ["build"],
+      "problemMatcher": ["$rustc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "cargo test",
+      "command": "cargo",
+      "args": ["test"],
+      "problemMatcher": ["$rustc"],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
     }
   ]
 }
